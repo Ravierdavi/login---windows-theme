@@ -17,6 +17,8 @@ Windows 7 tema:
 #0642D4
 
 -----------------------------------------------
-T�tulo: Login
+Título: Login
 
 Mensagem: 
+Seja Bem-vindo(a)!
+Para continuar acessando o nosso site faça o seu cadastro.
