@@ -1,0 +1,22 @@
+Windows 11 tema:
+#80B8EE
+#0076D3
+#235A9E
+#082642
+
+Windows 10 tema:
+#9BF3DA
+#59C7CC
+#149EC0
+#216CB0
+
+Windows 7 tema:
+#8789C8
+#8AD7E4
+#11B7C6
+#0642D4
+
+-----------------------------------------------
+Título: Login
+
+Mensagem: 
