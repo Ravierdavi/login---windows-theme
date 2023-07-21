@@ -1,9 +1,25 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 580px) { 
+    body main > #container {
+        margin: 7vw auto 0 auto;
+    }
     body main > #symbol-windows > p {
         display: none;
     }
+    body > main > #container > #login > form > #esqueci-senha {
+        border: 2px solid #D2370C;
+    }
+}
+
+:root {
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gradient01: #e8ff1e;
+    --gradient02: #46b5ff;
+    --windows-number: "7";
+    --input-box-color: #28591B;
+    --input-color: #c4ff77;
+    --button-color: #D2370C;
 }
 
 /* -------------------- Mobile First -------------------- */
@@ -13,29 +29,16 @@
     padding: 0;
 }
 
-html, body {
-    width: 100vw;
-    height: 100vh;
-}
-
 body {
-    position: relative;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main {
-    position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to top, #e8ff1e, #46b5ff);
+    background-image: linear-gradient(to top, var(--gradient01), var(--gradient02));
+    font-family: var(--font);
 }
 
 main > #container {
-    position: absolute;
-    top: clamp(0px, 35vw + 200px, 50%);
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: block;
+    margin: 40px auto 0 auto;
     max-width: 360px;
     width: 80vw;
     min-width: 180px;
@@ -50,7 +53,7 @@ main > #container {
 main > #container > #background-image {
     width: 100%;
     height: 38%;
-    background: blue url(../imgs/win7-background.png) center center /cover no-repeat;
+    background: blue url(../imgs/win7-background-mobile.png) center center /cover no-repeat;
     border-radius: 20px 20px 0 0;
 }
 
@@ -63,7 +66,7 @@ main > #container > #login {
 
 main > #container > #login > h1 {
     margin-bottom: 2px;
-    font-size: clamp(0px, 5px + 5vw, 35px);
+    font-size: clamp(0px, 7px + 5vw, 35px);
     font-weight: 900;
 }
 
@@ -77,21 +80,21 @@ main > #container > #login > form > .input-box {
     max-height: 45px;
     height: 10vw;
     margin: clamp(0px, 9px + 1vw, 12px) auto 0 auto;
-    background-color: #28591B;
-    border-radius: 12px;
+    background-color: var(--input-box-color);
+    border-radius: clamp(0px, 2vw, 12px);
 }
 
 main > #container > #login > form > .input-box > input {
     width: 84%;
     max-height: 40px;
-    height: 9.2vw;
+    height: 8.5vw;
     position: absolute;
-    top: 49%;
-    left: 57%;
-    transform: translate(-50%, -50%);
+    top: 6%;
+    left: 15%;
     padding-left: 3px;
-    border-radius: 12px;
-    background-color: #c4ff77;
+    border: none;
+    border-radius: clamp(0px, 2vw, 12px);
+    background-color: var(--input-color);
     font-size: clamp(0px, 4px + 3vw, 16px);
     outline: none;
 }
@@ -104,9 +107,10 @@ main > #container > #login > form > #input-entrar {
     width: 90%;
     max-height: 45px;
     height: 10vw;
-    margin:clamp(0px, 8px + 1vw, 12px) auto 0 auto;
-    background-color: #D2370C;
-    border-radius: 10px;
+    margin: clamp(0px, 8px + 1vw, 12px) auto 0 auto;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: clamp(0px, 1.7vw, 10px);
     font-size: clamp(0px, 8px + 2vw, 25px);
     color: white;
 }
@@ -118,9 +122,9 @@ main > #container > #login > form > #esqueci-senha {
     max-height: 45px;
     height: 10vw;
     margin:clamp(0px, 8px + 1vw, 12px) auto 0 auto;
-    border-radius: 10px;
-    border: 3px solid #D2370C;
-    color: #D2370C;
+    border-radius: clamp(0px, 1.7vw, 10px);
+    border: 3px solid var(--button-color);
+    color: var(--button-color);
     text-decoration: none;
     font-weight: 600;
     font-size: clamp(0px, 3px + 3vw, 16px);
@@ -155,7 +159,7 @@ main > #fundo-btn-menu > #btn-menu {
 main > #symbol-windows {
     float: right;
     text-align: center;
-    margin-top: 9px;
+    margin-top: 4px;
     padding: clamp(0px, 2.5vw, 20px);
 }
 
@@ -167,6 +171,10 @@ main > #symbol-windows > p {
     color: white;
     font-size: clamp(0px, 6px + 2vw, 16px);
     font-weight: 600;
+}
+
+main > #symbol-windows > #windows-number::after {
+    content: var(--windows-number);
 }
 
 /* Configurações extras */
@@ -195,23 +203,52 @@ label > .material-symbols-outlined {
 }
 
 #menu-ativo > #barra-lateral {
-    float: left;
-    width: 20%;
+    position: absolute;
+    max-width: 100px;
+    width: 25%;
     height: 100%;
     background-color: #1e1e1e;
 }
 
+#menu-ativo > #barra-lateral div {
+    width: 100%;
+    padding-top: clamp(0px, 10px + 3vw, 20px);
+    padding-bottom: clamp(0px, 10px + 3vw, 20px);
+}
+
+#menu-ativo > #barra-lateral div:hover {
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
 #menu-ativo > #barra-lateral img {
     display: block;
-    width: 100px;
-    margin: 40px auto 0 auto;
+    margin: auto;
+}
+
+#menu-ativo > #barra-lateral > #win11-icon-mobile > img {
+    width: 60%;
+}
+
+#menu-ativo > #barra-lateral > #win10-icon-mobile > img {
+    width: 69%;
+}
+
+#menu-ativo > #barra-lateral > #win7-icon-mobile > img {
+    width: 67%;
+}
+
+#menu-ativo > #barra-lateral > a img {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
 }
 
 #menu-ativo > #fundo {
-    float: left;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
 #menu-big {
