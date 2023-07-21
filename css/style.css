@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 580px) { 
+    body main > #symbol-windows > p {
+        display: none;
+    }
+}
+
 /* -------------------- Mobile First -------------------- */
 * {
     box-sizing: border-box;
@@ -13,6 +19,7 @@ html, body {
 }
 
 body {
+    position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -25,15 +32,15 @@ main {
 
 main > #container {
     position: absolute;
-    top: 50%;
+    top: clamp(0px, 35vw + 200px, 50%);
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
     max-width: 360px;
-    width: 60vw;
+    width: 80vw;
     min-width: 180px;
     max-height: 550px;
-    height: calc(80vw + 85px);
+    height: calc(90vw + 120px);
     min-height: 100px;
     background-color: #fff;
     border-radius: 20px;
@@ -56,29 +63,28 @@ main > #container > #login {
 
 main > #container > #login > h1 {
     margin-bottom: 2px;
-    font-size: clamp(0px, 16px + 3vw, 35px);
+    font-size: clamp(0px, 5px + 5vw, 35px);
     font-weight: 900;
 }
 
 main > #container > #login > p {
-    font-size: clamp(0px, 4px + 2vw, 16px);
-    line-height: 1em;
+    font-size: clamp(0px, 6px + 2vw, 16px);
 }
 
 main > #container > #login > form > .input-box {
     position: relative;
     width: 90%;
     max-height: 45px;
-    height: 8vw;
-    margin:clamp(0px, 5px + 1vw, 12px) auto 0 auto;
+    height: 10vw;
+    margin: clamp(0px, 9px + 1vw, 12px) auto 0 auto;
     background-color: #28591B;
     border-radius: 12px;
 }
 
 main > #container > #login > form > .input-box > input {
-    width: 82%;
-    max-height: 38px;
-    height: 7vw;
+    width: 84%;
+    max-height: 40px;
+    height: 9.2vw;
     position: absolute;
     top: 49%;
     left: 57%;
@@ -86,7 +92,7 @@ main > #container > #login > form > .input-box > input {
     padding-left: 3px;
     border-radius: 12px;
     background-color: #c4ff77;
-    font-size: clamp(0px, 3px + 3vw, 16px);
+    font-size: clamp(0px, 4px + 3vw, 16px);
     outline: none;
 }
 
@@ -97,11 +103,11 @@ main > #container > #login > form > .input-box > input:focus-within {
 main > #container > #login > form > #input-entrar {
     width: 90%;
     max-height: 45px;
-    height: 8vw;
-    margin:clamp(0px, 5px + 1vw, 12px) auto 0 auto;
+    height: 10vw;
+    margin:clamp(0px, 8px + 1vw, 12px) auto 0 auto;
     background-color: #D2370C;
     border-radius: 10px;
-    font-size: clamp(0px, 6px + 2vw, 25px);
+    font-size: clamp(0px, 8px + 2vw, 25px);
     color: white;
 }
 
@@ -110,22 +116,57 @@ main > #container > #login > form > #esqueci-senha {
     display: block;
     width: 90%;
     max-height: 45px;
-    height: 8vw;
-    margin:clamp(0px, 5px + 1vw, 12px) auto 0 auto;
+    height: 10vw;
+    margin:clamp(0px, 8px + 1vw, 12px) auto 0 auto;
     border-radius: 10px;
     border: 3px solid #D2370C;
     color: #D2370C;
-    text-align: center;
     text-decoration: none;
     font-weight: 600;
+    font-size: clamp(0px, 3px + 3vw, 16px);
 }
 
 #esqueci-senha > span {
-    font-size: clamp(0px, 3px + 2vw, 16px);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+main > #fundo-btn-menu {
+    position: relative;
+    display: inline-block;
+    width: clamp(0px, 35px + 5vw, 70px);
+    height: clamp(0px, 30px + 4vw, 60px);
+    margin-top: clamp(0px, 4vw, 20px);
+    margin-left: clamp(0px, 4vw, 20px);
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 10px;
+}
+
+main > #fundo-btn-menu > #btn-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(0px, 10px + 7vw, 45px);
+}
+
+main > #symbol-windows {
+    float: right;
+    text-align: center;
+    margin-top: 9px;
+    padding: clamp(0px, 2.5vw, 20px);
+}
+
+main > #symbol-windows > #windows-image {
+    width: clamp(0px, 30px + 10vw, 80px);
+}
+
+main > #symbol-windows > p {
+    color: white;
+    font-size: clamp(0px, 6px + 2vw, 16px);
+    font-weight: 600;
 }
 
 /* Configurações extras */
@@ -138,7 +179,41 @@ label > .material-symbols-outlined {
     top: 50%;
     left: 5%;
     transform: translate(-50%, -50%);
-    font-size: clamp(0px, 3px + 5vw, 2.2em);
+    font-size: clamp(0px, 6px + 5vw, 2.2em);
     width: 8%;
     margin: 0 0 0 3px;
+}
+
+/* Configuração menu */
+    #menu-ativo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#menu-ativo > #barra-lateral {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #1e1e1e;
+}
+
+#menu-ativo > #barra-lateral img {
+    display: block;
+    width: 100px;
+    margin: 40px auto 0 auto;
+}
+
+#menu-ativo > #fundo {
+    float: left;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+#menu-big {
+    display: none;
 }
