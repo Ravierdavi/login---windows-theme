@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 800px) {
+    body main > #container {
+        height: 276px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    body main > #symbol-windows > p {
+        display: none;
+    }
+}
+
+/* Configurações para tablets, pcs e telas maiores */
+main > #container {
+    position: relative;
+    margin-top: 15vh;
+    max-width: none;
+    width: 80vw;
+    height: min(21vw + 120px, 340px);
+}
+
+main > #container > #background-image {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+main > #container > #login {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+}
+
+main > #container > #login > h1 {
+    font-size: clamp(0px, 6px + 3vw, 38px);
+}
+
+main > #container > #login > p {
+    font-size: clamp(0px, 6px + 1vw, 17px);
+}
+
+main > #container > #login > form > .input-box {
+    height: 4.45vw;
+    margin: 10px auto 0 auto;
+}
+
+main > #container > #login > form > .input-box > input {
+    width: 85%;
+    left: 14%;
+    top: 5%;
+    height: 4vw;
+    font-size: clamp(0px, 4px + 3vw, 17px);
+}
+
+main > #container > #login > form > #input-entrar {
+    height: 4.45vw;
+    margin: clamp(0px, 1vw, 10px) auto 0 auto;
+    font-size: clamp(0px, 4px + 2vw, 22px);
+}
+
+main > #container > #login > form > #esqueci-senha {
+    height: 4.45vw;
+    margin: clamp(0px, 1vw, 10px) auto 0 auto;
+    font-size: clamp(0px, 3px + 3vw, 17.2px);
+}
+
+main > #fundo-btn-menu {
+    width: clamp(0px, 35px + 5vw, 85px);
+    height: clamp(0px, 30px + 4vw, 70px);
+    margin-top: clamp(0px, 4vw, 30px);
+    margin-left: clamp(0px, 4vw, 30px);
+}
+
+main > #fundo-btn-menu > #btn-menu {
+    font-size: clamp(0px, 10px + 5vw, 55px);
+}
+
+main > #symbol-windows {
+    padding: clamp(0px, 3.5vw, 25px);
+}
+
+main > #symbol-windows > #windows-image {
+    width: clamp(0px, 20px + 10vw, 85px);
+}
+
+main > #symbol-windows > p {
+    font-size: clamp(0px, 6px + 2vw, 18px);
+}
+
+/* Configurações extras */
+label > .material-symbols-outlined {
+    font-size: clamp(0px, 6px + 3vw, 2.5em);
+    width: 5%;
+}

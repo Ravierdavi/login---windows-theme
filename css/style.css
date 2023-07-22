@@ -2,12 +2,12 @@
 
 @media screen and (max-width: 580px) { 
     body main > #container {
-        margin: 7vw auto 0 auto;
+        margin-top: calc(7vw + 15px);
     }
     body main > #symbol-windows > p {
         display: none;
     }
-    body > main > #container > #login > form > #esqueci-senha {
+    body main > #container > #login > form > #esqueci-senha {
         border: 2px solid #D2370C;
     }
 }
@@ -33,12 +33,14 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to top, var(--gradient01), var(--gradient02));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: var(--font);
 }
 
 main > #container {
     display: block;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 50px auto;
     max-width: 360px;
     width: 80vw;
     min-width: 180px;
@@ -47,7 +49,9 @@ main > #container {
     min-height: 100px;
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.342);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.438);
+    transition: width 0.4s, height 0.4s;
+    transition-timing-function: ease;
 }
 
 main > #container > #background-image {
@@ -159,12 +163,11 @@ main > #fundo-btn-menu > #btn-menu {
 main > #symbol-windows {
     float: right;
     text-align: center;
-    margin-top: 4px;
     padding: clamp(0px, 2.5vw, 20px);
 }
 
 main > #symbol-windows > #windows-image {
-    width: clamp(0px, 30px + 10vw, 80px);
+    width: clamp(0px, 20px + 10vw, 80px);
 }
 
 main > #symbol-windows > p {
@@ -189,12 +192,11 @@ label > .material-symbols-outlined {
     transform: translate(-50%, -50%);
     font-size: clamp(0px, 6px + 5vw, 2.2em);
     width: 8%;
-    margin: 0 0 0 3px;
 }
 
 /* Configuração menu */
     #menu-ativo {
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
