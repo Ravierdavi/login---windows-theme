@@ -16,7 +16,7 @@
 main > #container {
     position: relative;
     margin-top: 15vh;
-    max-width: none;
+    max-width: 850px;
     width: 80vw;
     height: min(21vw + 120px, 340px);
 }

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* Configurações para telas grandes */
+main > #container {
+    margin-top: calc(70vh - (21vw + 120px));
+    max-width: 1200px;
+    width: 70vw;
+    height: min(21vw + 120px, 440px);
+}
+
+main > #container > #background-image {
+    right: 0;
+    width: 45%;
+    border-radius: 0 20px 20px 0;
+}
+
+main > #container > #login {
+    left: 0;
+    width: 55%;
+}
+
+main > #container > #login > h1 {
+    font-size: clamp(0px, 2px + 3vw, 46px);
+    margin: 10px 0 5px 0;
+}
+
+main > #container > #login > p {
+    font-size: clamp(0px, 4px + 1vw, 20.5px);
+}
+
+main > #container > #login > form > .input-box {
+    max-height: 55px;
+    height: 4vw;
+    margin: clamp(0px, 0.8vw, 15px) auto 0 auto;
+    border-radius: clamp(0px, 1vw, 15px);
+}
+
+main > #container > #login > form > .input-box > input {
+    max-height: 50px;
+    height: 3.6vw;
+    font-size: clamp(0px, 4px + 1.1vw, 20px);
+    border-radius: clamp(0px, 1vw, 15px);
+}
+
+main > #container > #login > form > #input-entrar {
+    max-height: 55px;
+    height: 4vw;
+    margin: clamp(0px, 0.8vw, 15px) auto 0 auto;
+    font-size: clamp(0px, 8px + 1vw, 25px);
+    border-radius: clamp(0px, 1vw, 13px);
+}
+
+main > #container > #login > form > #esqueci-senha {
+    max-height: 55px;
+    height: 4vw;
+    margin: clamp(0px, 0.8vw, 15px) auto 0 auto;
+    font-size: clamp(0px, 4px + 1vw, 19px);
+    border-radius: clamp(0px, 1vw, 13px);
+}
+
+main > #fundo-btn-menu {
+    visibility: hidden;
+}
+
+main > #symbol-windows {
+    padding: clamp(0px, 3vw, 48px);
+}
+
+main > #symbol-windows > #windows-image {
+    width: clamp(0px, 25px + 5vw, 90px);
+}
+
+main > #symbol-windows > p {
+    font-size: clamp(0px, 6px + 1vw, 21px);
+}
+
+/* Configurações extras */
+label > .material-symbols-outlined {
+    font-size: clamp(0px, 15px + 2vw, 2.7em);
+}
