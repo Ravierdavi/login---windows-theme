@@ -8,7 +8,7 @@ main > #container {
     height: min(21vw + 120px, 440px);
 }
 
-main > #container > #background-image {
+main > #container > .background-image {
     right: 0;
     width: 45%;
     border-radius: 0 20px 20px 0;
@@ -77,4 +77,70 @@ main > #symbol-windows > p {
 /* Configurações extras */
 label > .material-symbols-outlined {
     font-size: clamp(0px, 15px + 2vw, 2.7em);
+}
+
+/* Configuração menu */
+#menu-big {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 130px;
+    width: 7vw;
+    min-width: 90px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+#menu-big > div {
+    width: 100%;
+    padding-top: min(2vw, 30px);
+    padding-bottom: min(2vw, 30px);
+}
+
+#menu-big > div:hover {
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+#menu-big > div > img {
+    display: block;
+    margin: auto;
+}
+
+#menu-big > #win11-icon-bs > img {
+    width: 60%;
+}
+
+#menu-big > #win10-icon-bs > img {
+    width: 69%;
+}
+
+#menu-big > #win7-icon-bs > img {
+    width: 67%;
+}
+
+#menu-big > a img {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+}
+
+#menu-ativo {
+    display: none;
+}
+
+/* Configurações para imagem de fundo */
+#bg-mobile {
+    display: none;
+}
+
+#bg-tablet {
+    display: none;
+}
+
+#bg-bigscreen {
+    display: block;
+    background: blue url(../imgs/win7-background-bigscreens.png) center center /cover no-repeat;
 }

@@ -21,7 +21,7 @@ main > #container {
     height: min(21vw + 120px, 340px);
 }
 
-main > #container > #background-image {
+main > #container > .background-image {
     position: absolute;
     width: 40%;
     height: 100%;
@@ -95,4 +95,27 @@ main > #symbol-windows > p {
 label > .material-symbols-outlined {
     font-size: clamp(0px, 6px + 3vw, 2.5em);
     width: 5%;
+}
+
+/* Configuração menu */
+#menu-ativo {
+    display: none;
+}
+
+#menu-big {
+    display: none;
+}
+
+/* Configurações para imagem de fundo */
+#bg-mobile {
+    display: none;
+}
+
+#bg-tablet {
+    display: block;
+    background: blue url(../imgs/win7-background-tablet.png) center center /cover no-repeat;
+}
+
+#bg-bigscreen {
+    display: none;
 }
