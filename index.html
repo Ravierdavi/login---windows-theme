@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="css/bigscreens.css" media="screen and (min-width: 1200px)">
     <link rel="stylesheet" href="css/print.css" media="print">
 </head>
-<body>
+<body onresize="verificarTamanhoDaTela()">
     <!-- All medias -->
     <main>
-        <section id="fundo-btn-menu">
+        <section id="fundo-btn-menu" onclick="ativarMenu()">
             <i id="btn-menu" class="material-symbols-outlined">Menu</i>
         </section>
 
         <section id="symbol-windows">
             <img id="windows-image" src="./imgs/win7-icon.png" alt="Símbolo do windows">
             <p>Windows</p>
-            <p id="windows-number"></p>
+            <p id="windows-number">7</p>
         </section>
 
         <section id="container">
@@ -63,20 +63,22 @@
     <!-- Menu Mobile -->
     <section id="menu-ativo">
         <section id="barra-lateral">
-            <div id="win11-icon-mobile"><img src="imgs/win11-icon.png" alt="Windows 11 - ícone"></div>
-            <div id="win10-icon-mobile"><img src="imgs/win10-icon.png" alt="Windows 10 - ícone"></div>
-            <div id="win7-icon-mobile"><img src="imgs/win7-icon.png" alt="Windows 7 - ícone"></div>
+            <div id="win11-icon-mobile" onclick="mudarTema('win11')"><img src="imgs/win11-icon.png" alt="Windows 11 - ícone"></div>
+            <div id="win10-icon-mobile" onclick="mudarTema('win10')"><img src="imgs/win10-icon.png" alt="Windows 10 - ícone"></div>
+            <div id="win7-icon-mobile" onclick="mudarTema('win7')"><img src="imgs/win7-icon.png" alt="Windows 7 - ícone"></div>
             <a href="https://github.com/Ravierdavi" target="_blank"><img src="imgs/github-icon.png" alt="Github - ícone"></a>
         </section>
-        <div id="fundo"></div>
+        <div id="fundo" onclick="desativarMenu()"></div>
     </section>
 
     <!-- Menu Big screens -->
     <section id="menu-big">
-        <div id="win11-icon-bs"><img src="imgs/win11-icon.png" alt="Windows 11 - ícone"></div>
-        <div id="win10-icon-bs"><img src="imgs/win10-icon.png" alt="Windows 10 - ícone"></div>
-        <div id="win7-icon-bs"><img src="imgs/win7-icon.png" alt="Windows 7 - ícone"></div>
+        <div id="win11-icon-bs" onclick="mudarTema('win11')"><img src="imgs/win11-icon.png" alt="Windows 11 - ícone"></div>
+        <div id="win10-icon-bs" onclick="mudarTema('win10')"><img src="imgs/win10-icon.png" alt="Windows 10 - ícone"></div>
+        <div id="win7-icon-bs" onclick="mudarTema('win7')"><img src="imgs/win7-icon.png" alt="Windows 7 - ícone"></div>
         <a href="https://github.com/Ravierdavi" target="_blank"><img src="imgs/github-icon.png" alt="Github - ícone"></a>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

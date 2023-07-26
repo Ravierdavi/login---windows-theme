@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "Segoe UI Variable";
+    src: url("../font/SegoeUIVF.ttf");
+}
+
 @media screen and (max-width: 580px) { 
     body main > #container {
         margin-top: calc(7vw + 15px);
@@ -8,7 +13,7 @@
         display: none;
     }
     body main > #container > #login > form > #esqueci-senha {
-        border: 2px solid #D2370C;
+        border: 2px solid var(--button-color);
     }
 }
 
@@ -58,7 +63,6 @@
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --gradient01: #e8ff1e;
     --gradient02: #46b5ff;
-    --windows-number: "7";
     --input-box-color: #28591B;
     --input-color: #c4ff77;
     --button-color: #D2370C;
@@ -181,6 +185,7 @@ main > #container > #login > form > #esqueci-senha {
 }
 
 main > #fundo-btn-menu {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     width: clamp(0px, 35px + 5vw, 70px);
@@ -213,10 +218,6 @@ main > #symbol-windows > p {
     color: white;
     font-size: clamp(0px, 6px + 2vw, 16px);
     font-weight: 600;
-}
-
-main > #symbol-windows > #windows-number::after {
-    content: var(--windows-number);
 }
 
 /* Configurações extras */
